@@ -1,0 +1,7 @@
+This is me trying to use my text editor. It appears that it actually saved the file contents this time.
+
+I am having fun using this thing. It appears to be functioning without any problems.
+
+It is also quite fast, and very minimal. And, it only uses 1MB of memory.
+
+The next thing to figure out is to display lines numbers. 
