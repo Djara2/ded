@@ -1,1 +1,4 @@
-This is me trying to use my text editor. It appears that it actually saved the file contents this time.Now I am typing again. I hope that it will actually save my file contents.
+This is me trying to use my text editor.
+It appears that it actually saved the file contents this time.
+Now I am typing again.
+I hope that it will actually save my file contents.
