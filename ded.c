@@ -27,9 +27,6 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	enum modes {NORMAL, NORMAL_COMMAND, INSERT, TERMINATED, COMMAND_EVALUATE};
-	enum modes mode = NORMAL;
-
 	// store file contents for modification. At first, it stores 1,000,000 bytes (characters) (1 megabyte).
 	// It is unlikely that more memory should be needed.
 	unsigned long file_buffer_len = 0;
@@ -43,12 +40,7 @@ int main(int argc, char *argv[])
 	int c;
 	unsigned long lines_len = 0;
 	unsigned long lines_capacity = 1024;
-	char **lines = malloc(sizeof(char*) * lines_capacity);
-
-	// this array is parallel to the buffer for storing the lines, so we do not 
-	// have to keep track of its size, so long as we are diligent to ensure it
-	// resizes alongside the lines buffer. 
-	unsigned short *line_lengths = malloc(sizeof(unsigned short) * 1024);
+	struct line **lines = malloc(sizeof(struct line*) * lines_capacity);
 
 	// read contents into file buffer
 	while((c = fgetc(SOURCE_FILE)) != EOF)
